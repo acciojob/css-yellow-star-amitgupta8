@@ -1,1 +1,41 @@
 /*  your css code here. If applicable */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.star {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid yellow;
+    position: relative;
+}
+
+.star::before,
+.star::after {
+    content: '';
+    position: absolute;
+    top: -35px;
+    left: -50px;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid yellow;
+    transform: rotate(180deg);
+}
+
+.star::before {
+    transform: rotate(60deg);
+}
+
+.star::after {
+    transform: rotate(-60deg);
+}
+
